@@ -458,12 +458,12 @@
 //    * Убрать topping, при условии, что она ранее была добавлена
 //    * @param {String} topping - Тип добавки
 //    */
-//   removeTopping(topping) {
-//     if(this._toppings.includes(topping)){
-//       this._toppings = this._toppings.filter(el => el !== topping)
-    
-//   }
- 
+    //       removeTopping(topping) {
+  //         if(this._toppings.includes(topping)){
+  //             return this._toppings.splice(this._toppings.indexOf(topping), 1);
+  //         }
+          
+  //         // console.log(this._toppings.filter(el => el === topping));
 //   console.log(this._toppings);
 // }
 //   /**

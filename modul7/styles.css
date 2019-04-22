@@ -1,4 +1,4 @@
-/*@-webkit-keyframes zoomOutLeft {
+@-webkit-keyframes zoomOutLeft {
     40% {
       opacity: 1;
       -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(42px, 0, 0);
@@ -67,7 +67,7 @@
      opacity:1;
      animation: zoomOutLeft 1s linear;
  }
-*/
+
 
 
 
@@ -164,3 +164,4 @@ html {
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.3);
   }
 */
+

@@ -12,47 +12,47 @@
 
 //--------------------------------------------------------------------------
 
-// let text = document.querySelector('div');
+let text = document.querySelector('div');
 
-// let text = document.querySelectorAll('div');
+let text = document.querySelectorAll('div');
 
-// console.log(text.textContent);
+console.log(text.textContent);
 
 //-------------------------------------------------------------------
 
-//console.log(list.children);
-//console.log(list.firstElementChild.textContent = 'first');
+console.log(list.children);
+console.log(list.firstElementChild.textContent = 'first');
 
 
 //--------------------------------------------------------------------------
-// let list = document.querySelector('.list');
-// function fn(el){
-//     //let newMass = Array.from(list.children);
-//     //------or--------
-//     let newMass = [...el].map(el => el.textContent );
-//     return newMass
+let list = document.querySelector('.list');
+function fn(el){
+    //let newMass = Array.from(list.children);
+    //------or--------
+    let newMass = [...el].map(el => el.textContent );
+    return newMass
       
-//}
+}
 
-//let copyMass = fn (list.children)
-
-
-//console.log(copyMass);
+let copyMass = fn (list.children)
 
 
+console.log(copyMass);
 
 
 
-// const element = document.createElement('ul');
-
-// const body = document.body;
-
-// body.prepend(element);
-
-// let getli = copyMass.reduce((string, el)=> string + `<li>${el}</li>`,'');
 
 
-// element.innerHTML = getli;
+const element = document.createElement('ul');
+
+const body = document.body;
+
+body.prepend(element);
+
+let getli = copyMass.reduce((string, el)=> string + `<li>${el}</li>`,'');
+
+
+element.innerHTML = getli;
 
 
 
@@ -61,82 +61,82 @@
 
 
 
-// let textInput = document.querySelector('.text');
-// let Input = document.querySelector('.input');
-// let btn = document.querySelector('.btn')
+let textInput = document.querySelector('.text');
+let Input = document.querySelector('.input');
+let btn = document.querySelector('.btn')
 
-// console.log(btn)
-
-
-//btn.onclick = function(){
-
-//     if(Input.value.length  > 0 ){   
-//         textInput.textContent = Input.value
+console.log(btn)
 
 
+btn.onclick = function(){
 
-//     textInput.style.color ='red';
-//     textInput.style.fontSize ='100px';
-//    // console.log(Input.value)
-// }
-// }
+    if(Input.value.length  > 0 ){   
+        textInput.textContent = Input.value
 
 
-// function click(){
-//     if(Input.value.length  > 0 ){   
-//                 textInput.textContent = Input.value
+
+    textInput.style.color ='red';
+    textInput.style.fontSize ='100px';
+   // console.log(Input.value)
+}
+}
+
+
+function click(){
+    if(Input.value.length  > 0 ){   
+                textInput.textContent = Input.value
         
         
         
-//             textInput.style.color ='green';
-//             textInput.style.fontSize ='100px';
+            textInput.style.color ='green';
+            textInput.style.fontSize ='100px';
          
-//         }
-//         }
-// btn.addEventListener('click', click);
+        }
+        }
+btn.addEventListener('click', click);
 
 
 
 //---------------------------------------------------------------------------
 
 
-// let forward = document.querySelector('.forward');
-// let back = document.querySelector('.back');
-// let images = document.querySelectorAll('.images img');
+let forward = document.querySelector('.forward');
+let back = document.querySelector('.back');
+let images = document.querySelectorAll('.images img');
 
-// //let double = document.querySelector('.images img');
-// //console.log(double.children);
+let double = document.querySelector('.images img');
+console.log(double.children);
 
-// //console.log(images);
+console.log(images);
 
-// let i = 0
+let i = 0
 
-// forward.onclick = function(){
-//   // images[i].style.display = 'none';
-//   images[i].className = '';
-//    i = i + 1;
+forward.onclick = function(){
+  // images[i].style.display = 'none';
+  images[i].className = '';
+   i = i + 1;
  
-//      if(i >= images.length){
-//          i = 0
-//      }
-//        images[i].className = 'showed'
+     if(i >= images.length){
+         i = 0
+     }
+       images[i].className = 'showed'
   
-// }
+}
 
 
 
-// back.onclick = function(){
-//     //images[i].style.display = 'none';
-//     images[i].className = '';
-//     i -= 1;
+back.onclick = function(){
+    images[i].style.display = 'none';
+    images[i].className = '';
+    i -= 1;
   
-//       if(i < 0 ){
-//           i = images.length -1
-//       }
-//         //images[i].style.display = 'block'
-//         images[i].className = 'showed'
+      if(i < 0 ){
+          i = images.length -1
+      }
+        images[i].style.display = 'block'
+        images[i].className = 'showed'
    
-//  }
+ }
 
 
 
@@ -235,49 +235,49 @@
   - Добавьте все элементы галлереи в ul.gallery
 */
 
-// const galleryItems = [
-//     {
-//       url:
-//         "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-//       alt: "White and Black Long Fur Cat"
-//     },
-//     {
-//       url:
-//         "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-//       alt: "Orange and White Koi Fish Near Yellow Koi Fish"
-//     },
-//     {
-//       url:
-//         "https://images.pexels.com/photos/1216482/pexels-photo-1216482.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-//       alt: "Two Brown Hen and One Red Rooster"
-//     },
-//     {
-//       url:
-//         "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-//       alt: "Group of Horses Running"
-//     },
-//     {
-//       url:
-//         "https://images.pexels.com/photos/1316294/pexels-photo-1316294.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-//       alt: "Macaw Birds"
-//     },
-//     {
-//       url:
-//         "https://images.pexels.com/photos/41178/africa-animal-big-carnivore-41178.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-//       alt: "2 Lion on Grass Field during Daytime"
-//     }
-//   ];
+const galleryItems = [
+    {
+      url:
+        "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      alt: "White and Black Long Fur Cat"
+    },
+    {
+      url:
+        "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      alt: "Orange and White Koi Fish Near Yellow Koi Fish"
+    },
+    {
+      url:
+        "https://images.pexels.com/photos/1216482/pexels-photo-1216482.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      alt: "Two Brown Hen and One Red Rooster"
+    },
+    {
+      url:
+        "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      alt: "Group of Horses Running"
+    },
+    {
+      url:
+        "https://images.pexels.com/photos/1316294/pexels-photo-1316294.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      alt: "Macaw Birds"
+    },
+    {
+      url:
+        "https://images.pexels.com/photos/41178/africa-animal-big-carnivore-41178.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      alt: "2 Lion on Grass Field during Daytime"
+    }
+  ];
 
   
-//   let list = document.querySelector('.gallery');
+  let list = document.querySelector('.gallery');
 
-//   console.log(list);
+  console.log(list);
 
-//   galleryItems.forEach(el => {
-//     list.innerHTML += `<li><img src='${el.url}' alt='${el.alt}' width = 300 height = 200></li>`;
-//   });
-//   list.style.listStyle = 'none';
-//   list.style.display = 'flex';
+  galleryItems.forEach(el => {
+    list.innerHTML += `<li><img src='${el.url}' alt='${el.alt}' width = 300 height = 200></li>`;
+  });
+  list.style.listStyle = 'none';
+  list.style.display = 'flex';
 
 
 
@@ -427,69 +427,69 @@
   3. Повесьте все посты в какой-то уже существующий DOM-узел.
 */
 
-const posts = [
-    {
-      img: "https://placeimg.com/400/150/arch",
-      title: "Post title 1",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nemo dignissimos ea temporibus voluptatem maiores maxime consequatur impedit nobis sunt similique voluptas accusamus consequuntur, qui modi nesciunt veritatis distinctio rem!",
-      link: 'link-1.com'
-    },
-    {
-      img: "https://placeimg.com/400/150/nature",
-      title: "Post title 2",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nemo dignissimos ea temporibus voluptatem maiores maxime consequatur impedit nobis sunt similique voluptas accusamus consequuntur, qui modi nesciunt veritatis distinctio rem!",
-      link: 'link-2.com'
-    },
-    {
-      img: "https://placeimg.com/400/150/arch",
-      title: "Post title 3",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nemo dignissimos ea temporibus voluptatem maiores maxime consequatur impedit nobis sunt similique voluptas accusamus consequuntur, qui modi nesciunt veritatis distinctio rem!",
-      link: 'link-3.com'
-    }
-  ];
+// const posts = [
+//     {
+//       img: "https://placeimg.com/400/150/arch",
+//       title: "Post title 1",
+//       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nemo dignissimos ea temporibus voluptatem maiores maxime consequatur impedit nobis sunt similique voluptas accusamus consequuntur, qui modi nesciunt veritatis distinctio rem!",
+//       link: 'link-1.com'
+//     },
+//     {
+//       img: "https://placeimg.com/400/150/nature",
+//       title: "Post title 2",
+//       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nemo dignissimos ea temporibus voluptatem maiores maxime consequatur impedit nobis sunt similique voluptas accusamus consequuntur, qui modi nesciunt veritatis distinctio rem!",
+//       link: 'link-2.com'
+//     },
+//     {
+//       img: "https://placeimg.com/400/150/arch",
+//       title: "Post title 3",
+//       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nemo dignissimos ea temporibus voluptatem maiores maxime consequatur impedit nobis sunt similique voluptas accusamus consequuntur, qui modi nesciunt veritatis distinctio rem!",
+//       link: 'link-3.com'
+//     }
+//   ];
 
-  function createPostCard(post) {
-    //select root
-    let root = document.querySelector("#root");
+//   function createPostCard(post) {
+
+//     let root = document.querySelector("#root");
   
-    //create el
-    let card = document.createElement("div");
-    let cardImage = document.createElement("img");
-    let cardBody = document.createElement("div");
-    let cardTitle = document.createElement("h2");
-    let cardText = document.createElement("p");
-    let cardLink = document.createElement("a");
+
+//     let card = document.createElement("div");
+//     let cardImage = document.createElement("img");
+//     let cardBody = document.createElement("div");
+//     let cardTitle = document.createElement("h2");
+//     let cardText = document.createElement("p");
+//     let cardLink = document.createElement("a");
   
-    //classes
-    card.classList.add("card");
-    cardImage.classList.add("card__image");
-    cardBody.classList.add("card__body");
-    cardTitle.classList.add("card_title");
-    cardText.classList.add("card__text");
-    cardLink.classList.add("card__link");
+
+//     card.classList.add("card");
+//     cardImage.classList.add("card__image");
+//     cardBody.classList.add("card__body");
+//     cardTitle.classList.add("card_title");
+//     cardText.classList.add("card__text");
+//     cardLink.classList.add("card__link");
   
-    //attributs
-    cardImage.setAttribute("src", post.img);
-    cardLink.setAttribute("href", "#");
   
-    //textContent
-    cardTitle.textContent = post.title;
-    cardText.textContent = post.text;
-    cardLink.textContent = post.link;
+//     cardImage.setAttribute("src", post.img);
+//     cardLink.setAttribute("href", "#");
   
-    //paste el to html
-    root.append(card);
-    card.append(cardImage);
-    card.append(cardBody);
-    cardBody.append(cardTitle);
-    cardBody.append(cardText);
-    cardBody.append(cardLink);
-  }
+
+//     cardTitle.textContent = post.title;
+//     cardText.textContent = post.text;
+//     cardLink.textContent = post.link;
   
-  function createCards(posts) {
-    posts.forEach(element => {
-      createPostCard(element);
-    });
-  }
+
+//     root.append(card);
+//     card.append(cardImage);
+//     card.append(cardBody);
+//     cardBody.append(cardTitle);
+//     cardBody.append(cardText);
+//     cardBody.append(cardLink);
+//   }
   
-  createCards(posts);
+//   function createCards(posts) {
+//     posts.forEach(element => {
+//       createPostCard(element);
+//     });
+//   }
+  
+//   createCards(posts);

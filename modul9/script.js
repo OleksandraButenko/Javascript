@@ -254,131 +254,255 @@
       нет смысла выполнять пересчет времени чаще чем каждые 100мс.
 */
 
-const clockface = document.querySelector(".js-clockface");
-const startBtn = document.querySelector(".js-timer-start");
-const stopBtn = document.querySelector(".js-timer-stop");
+// const clockface = document.querySelector(".js-clockface");
+// const startBtn = document.querySelector(".js-timer-start");
+// const stopBtn = document.querySelector(".js-timer-stop");
 
-const timer = {
-  startTime: null,
-  deltaTime: null,
-  id: null
-};
+// const timer = {
+//   startTime: null,
+//   deltaTime: null,
+//   id: null
+// };
 
-/*
-* Вспомогательные функции
-*/
+// /*
+// * Вспомогательные функции
+// */
 
-/*
-* Обновляет поле счетчика новым значением при вызове
-* аргумент time это кол-во миллисекунд
-*/
-function updateClockface(elem, time) {
-  // Используйте функцию getFormattedTime из задания #1
-  // elem.textContent = getFormattedTime(time);
-}
+// /*
+// * Обновляет поле счетчика новым значением при вызове
+// * аргумент time это кол-во миллисекунд
+// */
+// function updateClockface(elem, time) {
+//   // Используйте функцию getFormattedTime из задания #1
+//   // elem.textContent = getFormattedTime(time);
+// }
+
+// /*
+// * Подсветка активной кнопки
+// // */
+// function setActiveBtn(target) {
+//   if(target.classList.contains('active')) {
+//     return;
+//   }
+  
+//   startBtn.classList.remove('active');
+//   stopBtn.classList.remove('active');
+  
+//   target.classList.add('active');
+// }
+
+
+
+
+
+
+// const timer = {
+//   startTime: 0,
+//   deltaTime: null,
+//   id: null,
+//   pauseTime: 0,
+//   isActive: false
+// };
+
+// const clockface = document.querySelector(".js-clockface");
+// const startBtn = document.querySelector(".js-timer-start");
+// const stopBtn = document.querySelector(".js-timer-stop");
+// const section = document.querySelector(".timer");
+
+// startBtn.addEventListener('click', handleClickStart);
+// stopBtn.addEventListener('click', handleClickStop);
+// stopBtn.addEventListener('dblclick', handleClickReset);
+// section.addEventListener('click', setActiveBtn );
+
+
+
+// function handleClickStart () {
+//   if(!timer.isActive) {
+//     timer.isActive = true;
+//     this.pauseTime = 0;
+    
+//     timer.startTime = new Date() - timer.pauseTime;
+//     // console.log('timer.startTime', timer.startTime);
+//     timer.id = setInterval(() => {
+//       let currentTime = new Date();
+    
+//       timer.deltaTime = currentTime - timer.startTime;
+//       let time = new Date(timer.deltaTime);
+//       updateClockface(clockface, time)
+//     }, 100); 
+//   }
+// }
+
+// function handleClickStop (time) {
+//   timer.pauseTime = timer.deltaTime;
+  
+//   clearInterval(timer.id);
+  
+//   timer.isActive = false;
+//   timer.startTime = 0;
+//   timer.id = null;
+  
+// }
+
+// function handleClickReset() {
+//   // console.log('reset');
+//   timer.isActive = false;
+//   clearInterval(timer.id);
+//   timer.id = null;
+//   timer.startTime = 0;
+//   timer.deltaTime = 0;
+//   updateClockface(clockface, timer.startTime)
+// }
+
+// /*
+// * Обновляет поле счетчика новым значением при вызове
+// * аргумент time это кол-во миллисекунд
+// */
+// function getFormattedTime(time) {
+//   let date = new Date(time);
+//   let min = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+//   let sec = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+//   let ms = Math.floor(date.getMilliseconds() /100)
+//   return `${min}:${sec}.${ms}`;
+  
+// }
+
+// function updateClockface(el, time) {
+//   el.textContent = getFormattedTime(time);
+// }
 
 /*
 * Подсветка активной кнопки
 */
-function setActiveBtn(target) {
-  if(target.classList.contains('active')) {
-    return;
-  }
+// function setActiveBtn(event) {
+//   if(event.target.nodeName === 'BUTTON') {
+//     return;
+//   }
   
-  startBtn.classList.remove('active');
-  stopBtn.classList.remove('active');
+//   startBtn.classList.add('active');
+//   stopBtn.classList.add('active');
   
-  target.classList.add('active');
-}
+//   event.classList.contains('active');
+// }
 
 
 
-
-
-
-const timer = {
-  startTime: 0,
-  deltaTime: null,
-  id: null,
-  pauseTime: 0,
-  isActive: false
-};
-
-const clockface = document.querySelector(".js-clockface");
-const startBtn = document.querySelector(".js-timer-start");
-const stopBtn = document.querySelector(".js-timer-stop");
-
-startBtn.addEventListener('click', handleClickStart);
-stopBtn.addEventListener('click', handleClickStop);
-stopBtn.addEventListener('dblclick', handleClickReset);
-
-
-
-function handleClickStart () {
-  if(!timer.isActive) {
-    timer.isActive = true;
-    this.pauseTime = 0;
-    
-    timer.startTime = new Date() - timer.pauseTime;
-    // console.log('timer.startTime', timer.startTime);
-    timer.id = setInterval(() => {
-      let currentTime = new Date();
-    
-      timer.deltaTime = currentTime - timer.startTime;
-      let time = new Date(timer.deltaTime);
-      updateClockface(clockface, time)
-    }, 100); 
-  }
-}
-
-function handleClickStop (time) {
-  timer.pauseTime = timer.deltaTime;
+// function setActiveBtn(event) {
+//   if(event.target.nodeName === 'BUTTON') {
+//     return;
+//   }
   
-  clearInterval(timer.id);
+//   startBtn.classList.add('active');
+//   stopBtn.classList.add('active');
   
-  timer.isActive = false;
-  timer.startTime = 0;
-  timer.id = null;
-  
-}
+//   target.classList.remove('active');
+// }
 
-function handleClickReset() {
-  // console.log('reset');
-  timer.isActive = false;
-  clearInterval(timer.id);
-  timer.id = null;
-  timer.startTime = 0;
-  timer.deltaTime = 0;
-  updateClockface(clockface, timer.startTime)
-}
+
+
+//------------------------------------------TASK 5----------------------------------------------------
 
 /*
-* Обновляет поле счетчика новым значением при вызове
-* аргумент time это кол-во миллисекунд
+ * Есть переменная quantity хранящиая в себе
+ * текущее количество единиц какого-то товара на складе.
+ * 
+ * Напиши функцию processOrder(value), получающую
+ * кол-во товаров заказанных покупателем, и возвращающую промис.
+ * 
+ * Для имитации проверки достаточного количества товаров
+ * на складе используй setTimeout с задержкой 500мс.
+ * 
+ * Если на складе товаров больше либо равно заказанному
+ * количеству, функция возвращает промис который исполняется
+ * успешно со строкой "Ваш заказ готов!".
+ * 
+ * В противном случае, со строкой "К сожалению на складе не достаточно товаров!".
+ * 
+ * Если же пользователь ввел не число, то промис выполняется с ошибкой
+ * и значением "Некорректный ввод!".
 */
-function getFormattedTime(time) {
-  let date = new Date(time);
-  let min = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
-  let sec = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
-  let ms = Math.floor(date.getMilliseconds() /100)
-  return `${min}:${sec}.${ms}`;
-  
-}
 
-function updateClockface(el, time) {
-  el.textContent = getFormattedTime(time);
-}
+// const DELAY = 1000;
+// const quantity = 100;
+
+// function processOrder (value){ 
+// const promise = new Promise((resolve,reject)=>{
+//   setTimeout (function(){
+//       if(typeof value === "number"){
+//       value <= quantity ?resolve('Ваш заказ готов!') : reject('К сожалению на складе недостаточно товаров!')
+//       }else{
+//           reject('Некорректный ввод!');
+//       }
+//   },500)
+// })
+
+// return promise
+
+// }
+
+
+// Вызовы функции для проверки
+// processOrder(50)
+//   .then(console.log) // Ваш заказ готов!
+//   .catch(console.log);
+
+
+// processOrder(500)
+//   .then(console.log) // К сожалению на складе недостаточно товаров!
+//   .catch(console.log);
+
+// processOrder("lorem")
+//   .then(console.log)
+//   .catch(console.log); // Некорректный ввод!
+
+
+
+//----------------------------------------------------HOMEWORK-----------------------------------------------------------
 
 /*
-* Подсветка активной кнопки
+  Создайте скрипт секундомера.  
+  По ссылке можно посмотреть пример выбрав Stopwatch http://www.online-stopwatch.com/full-screen-stopwatch/
+  
+  Изначально в HTML есть разметка:
+  
+  <div class="stopwatch">
+    <p class="time js-time">00:00.0</p>
+    <button class="btn js-start">Start</button>
+    <button class="btn js-take-lap">Lap</button>
+    <button class="btn js-reset">Reset</button>
+  </div>
+  <ul class="laps js-laps"></ul>
+  
+  Добавьте следующий функционал:
+  
+  - При нажатии на кнопку button.js-start, запускается таймер, который считает время 
+    со старта и до текущего момента времени, обновляя содержимое элемента p.js-time 
+    новым значение времени в формате xx:xx.x (минуты:секунды.сотни_миллисекунд).
+       
+    🔔 Подсказка: так как необходимо отображать только сотни миллисекунд, интервал
+                  достаточно повторять не чаще чем 1 раз в 100 мс.
+    
+  - Когда секундомер запущен, текст кнопки button.js-start меняется на 'Pause', 
+    а функционал при клике превращается в оставновку секундомера без сброса 
+    значений времени.
+    
+    🔔 Подсказка: вам понадобится буль который описывает состояние таймера активен/неактивен.
+  
+  - Если секундомер находится в состоянии паузы, текст на кнопке button.js-start
+    меняется на 'Continue'. При следующем клике в нее, продолжается отсчет времени, 
+    а текст меняется на 'Pause'. То есть если во время нажатия 'Pause' прошло 6 секунд 
+    со старта, при нажатии 'Continue' 10 секунд спустя, секундомер продолжит отсчет времени 
+    с 6 секунд, а не с 16. 
+    
+    🔔 Подсказка: сохраните время секундомера на момент паузы и используйте его 
+                  при рассчете текущего времени после возобновления таймера отнимая
+                  это значение от времени запуска таймера.
+    
+  - Если секундомер находится в активном состоянии или в состоянии паузы, кнопка 
+    button.js-reset должна быть активна (на нее можно кликнуть), в противном случае
+    disabled. Функционал при клике - остановка таймера и сброс всех полей в исходное состояние.
+    
+  - Функционал кнопки button.js-take-lap при клике - сохранение текущего времени секундомера 
+    в массив и добавление в ul.js-laps нового li с сохраненным временем в формате xx:xx.x
 */
-function setActiveBtn(target) {
-  if(target.classList.contains('active')) {
-    return;
-  }
-  
-  startBtn.classList.remove('active');
-  stopBtn.classList.remove('active');
-  
-  target.classList.add('active');
-}
+
